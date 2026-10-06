@@ -1,0 +1,41 @@
+/* Extra styles for the admin page. Loaded after style.css */
+
+#admin-badge {
+  font-family: 'Fredoka', Arial, sans-serif;
+  background-color: #1b1b2f;
+  color: #ffe433;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-right: 12px;
+}
+
+#site-link {
+  color: #1b1b2f;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+input[type="password"] {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 18px;
+  padding: 8px 12px;
+  margin: 8px 8px 8px 0;
+  border: 3px solid #1b1b2f;
+  border-radius: 12px;
+}
+
+.delete-button {
+  font-family: 'Fredoka', Arial, sans-serif;
+  font-size: 16px;
+  background-color: #ff5a5a;
+  color: #1b1b2f;
+  border: 3px solid #1b1b2f;
+  border-radius: 30px;
+  padding: 4px 16px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #ffffff;
+}

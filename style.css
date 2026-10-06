@@ -1,0 +1,229 @@
+/* ===== COLORS (taken from the logo) =====
+   yellow: #ffe433
+   lime:   #a6e83c
+   cyan:   #25d6d6
+   ink:    #1b1b2f   (dark outline color)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1b1b2f;
+  background-color: #fffdf0;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka', Arial, sans-serif;
+  margin: 0 0 12px 0;
+}
+
+h1 { font-size: 52px; line-height: 1.1; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+
+p { max-width: 600px; }
+
+.hidden { display: none; }
+
+/* ===== HEADER ===== */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 8px 24px;
+  background-color: #ffffff;
+  border-bottom: 4px solid #1b1b2f;
+}
+
+#logo {
+  height: 70px;
+  cursor: pointer;
+}
+
+#nav button {
+  font-family: 'Fredoka', Arial, sans-serif;
+  font-size: 20px;
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #1b1b2f;
+}
+
+#nav button:hover {
+  background-color: #ffe433;
+}
+
+#account {
+  display: flex;
+  align-items: center;
+}
+
+#welcome {
+  margin-right: 12px;
+  font-weight: 700;
+}
+
+/* ===== BUTTONS ===== */
+.main-button {
+  font-family: 'Fredoka', Arial, sans-serif;
+  font-size: 18px;
+  background-color: #25d6d6;
+  color: #1b1b2f;
+  border: 3px solid #1b1b2f;
+  border-radius: 30px;
+  padding: 8px 22px;
+  cursor: pointer;
+}
+
+.main-button:hover { background-color: #a6e83c; }
+
+.main-button.upload { background-color: #ffe433; }
+.main-button.upload:hover { background-color: #a6e83c; }
+
+.side-button {
+  font-family: 'Fredoka', Arial, sans-serif;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #1b1b2f;
+  border: 3px solid #1b1b2f;
+  border-radius: 30px;
+  padding: 8px 22px;
+  cursor: pointer;
+}
+
+.side-button:hover { background-color: #ffe433; }
+
+.big {
+  font-size: 22px;
+  padding: 12px 30px;
+  margin: 8px 8px 8px 0;
+}
+
+/* ===== HOME ===== */
+#hero {
+  padding: 80px 24px;
+  background: linear-gradient(135deg, #ffe433, #a6e83c, #25d6d6);
+  border-bottom: 4px solid #1b1b2f;
+}
+
+#hero h1 { max-width: 700px; }
+
+#about {
+  padding: 60px 24px;
+}
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.about-box {
+  width: 260px;
+  padding: 20px;
+  margin: 0 16px 16px 0;
+  border: 3px solid #1b1b2f;
+  border-radius: 20px;
+}
+
+.about-box p { margin: 0; }
+
+.yellow { background-color: #ffe433; }
+.green  { background-color: #a6e83c; }
+.blue   { background-color: #25d6d6; }
+
+footer {
+  padding: 20px 24px;
+  background-color: #1b1b2f;
+  color: #ffffff;
+}
+
+footer p { margin: 0; }
+
+/* ===== LOGIN ===== */
+.center-box {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 3px solid #1b1b2f;
+  border-radius: 20px;
+}
+
+input[type="text"] {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 18px;
+  padding: 8px 12px;
+  margin: 8px 8px 8px 0;
+  border: 3px solid #1b1b2f;
+  border-radius: 12px;
+}
+
+/* ===== STUDIO / GALLERY ===== */
+.studio {
+  padding: 30px 24px;
+}
+
+.tools {
+  margin: 12px 0;
+}
+
+.tools label {
+  margin-right: 16px;
+}
+
+#canvas {
+  display: block;
+  max-width: 100%;
+  background-color: #ffffff;
+  border: 4px solid #1b1b2f;
+  border-radius: 12px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.art-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.art-card {
+  width: 260px;
+  margin: 0 16px 16px 0;
+  background-color: #ffffff;
+  border: 3px solid #1b1b2f;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.art-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #f2f2f2;
+}
+
+.art-card div {
+  padding: 8px 12px;
+}
+
+.art-card strong { display: block; }
+
+.empty-note {
+  padding: 16px;
+  border: 3px dashed #1b1b2f;
+  border-radius: 16px;
+}
+
+/* ===== SMALL SCREENS ===== */
+@media (max-width: 600px) {
+  h1 { font-size: 38px; }
+  #logo { height: 56px; }
+}
