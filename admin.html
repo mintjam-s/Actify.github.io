@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actify Admin - Moderation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <img id="logo" src="ACTIFY_LOGO.png" alt="Actify logo">
+
+    <nav id="nav">
+      <button id="link-gallery">Gallery moderation</button>
+    </nav>
+
+    <div id="account">
+      <span id="admin-badge">Admin</span>
+      <a id="site-link" href="index.html">View public site</a>
+      <button id="logout-button" class="main-button hidden" onclick="adminLogOut()">Log out</button>
+    </div>
+  </header>
+
+  <!-- ===== ADMIN LOGIN ===== -->
+  <main id="page-login">
+    <section class="center-box">
+      <h2>Admin log in</h2>
+      <p>Only moderators can open this page.</p>
+      <input id="password-input" type="password" placeholder="Admin password">
+      <br>
+      <button class="main-button big" onclick="adminLogIn()">Log in</button>
+      <p id="login-message"></p>
+    </section>
+  </main>
+
+  <!-- ===== MODERATION PAGE ===== -->
+  <main id="page-moderation" class="hidden">
+    <section class="studio">
+      <h2>Gallery moderation</h2>
+      <p>Delete any artwork that is illegal or inappropriate. Deleted artwork is removed from the public gallery and from the artist's portfolio.</p>
+      <p id="count-message"></p>
+      <p id="delete-message"></p>
+      <div id="admin-list" class="art-list"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

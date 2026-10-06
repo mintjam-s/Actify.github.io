@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actify - Draw and share your art</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <img id="logo" src="ACTIFY_LOGO.png" alt="Actify logo" onclick="showPage('home')">
+
+    <nav id="nav">
+      <button id="link-home" onclick="showPage('home')">Home</button>
+      <button id="link-portfolio" class="hidden" onclick="showPage('portfolio')">Portfolio</button>
+      <button id="link-gallery" onclick="showPage('gallery')">Gallery</button>
+    </nav>
+
+    <div id="account">
+      <span id="welcome" class="hidden"></span>
+      <button id="login-button" class="main-button" onclick="showPage('login')">Log in</button>
+      <button id="logout-button" class="main-button hidden" onclick="logOut()">Log out</button>
+    </div>
+  </header>
+
+  <!-- ===== HOME PAGE ===== -->
+  <main id="page-home" class="page">
+
+    <section id="hero">
+      <h1>Draw it here. Show it everywhere.</h1>
+      <p>Actify is a free online canvas and art gallery. Sketch right in your browser, or upload art you made somewhere else.</p>
+      <button class="main-button big" onclick="showPage('portfolio')">Start drawing</button>
+      <button class="side-button big" onclick="showPage('gallery')">Browse the gallery</button>
+    </section>
+
+    <section id="about">
+      <h2>About us</h2>
+      <p>Actify started with a simple idea: making art online should be easy, and sharing it should feel good.</p>
+      <div class="about-row">
+        <div class="about-box yellow">
+          <h3>Draw</h3>
+          <p>Pick a color, pick a brush, and draw on the canvas. No downloads needed.</p>
+        </div>
+        <div class="about-box green">
+          <h3>Upload</h3>
+          <p>Made something on paper or in another app? Upload the picture and add it to your portfolio.</p>
+        </div>
+        <div class="about-box blue">
+          <h3>Share</h3>
+          <p>Everything you post shows up in the gallery, where anyone can see it.</p>
+        </div>
+      </div>
+      <p>To post, draw, or upload, log in and open your Portfolio. Looking is free for everyone.</p>
+    </section>
+
+    <footer>
+      <p>Actify - made for artists.</p>
+    </footer>
+  </main>
+
+  <!-- ===== LOGIN PAGE ===== -->
+  <main id="page-login" class="page hidden">
+    <section class="center-box">
+      <h2>Log in to Actify</h2>
+      <p>Enter an artist name to continue.</p>
+      <input id="name-input" type="text" placeholder="Artist name">
+      <br>
+      <button class="main-button big" onclick="logIn()">Log in</button>
+      <p id="login-message"></p>
+    </section>
+  </main>
+
+  <!-- ===== PORTFOLIO PAGE (logged in only) ===== -->
+  <main id="page-portfolio" class="page hidden">
+    <section class="studio">
+      <h2>Your studio</h2>
+
+      <div class="tools">
+        <label>Color <input id="color-input" type="color" value="#1b1b2f"></label>
+        <label>Brush size <input id="size-input" type="range" min="1" max="40" value="6"></label>
+        <button class="side-button" id="eraser-button" onclick="useEraser()">Eraser</button>
+        <button class="side-button" id="pen-button" onclick="usePen()">Pen</button>
+        <button class="side-button" onclick="clearCanvas()">Clear canvas</button>
+      </div>
+
+      <canvas id="canvas" width="800" height="500"></canvas>
+
+      <div class="tools">
+        <input id="title-input" type="text" placeholder="Name your artwork">
+        <button class="main-button" onclick="saveDrawing()">Post drawing</button>
+        <button class="main-button upload" onclick="document.getElementById('file-input').click()">Upload artwork</button>
+        <input id="file-input" type="file" accept="image/*" class="hidden" onchange="uploadFile()">
+      </div>
+      <p id="studio-message"></p>
+    </section>
+
+    <section class="studio">
+      <h2>Your portfolio</h2>
+      <div id="portfolio-list" class="art-list"></div>
+    </section>
+  </main>
+
+  <!-- ===== GALLERY PAGE ===== -->
+  <main id="page-gallery" class="page hidden">
+    <section class="studio">
+      <h2>Gallery</h2>
+      <p>Art posted by the Actify community.</p>
+      <div id="gallery-list" class="art-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
